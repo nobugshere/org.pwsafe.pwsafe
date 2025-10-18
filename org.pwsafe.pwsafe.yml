@@ -1,6 +1,6 @@
 app-id: org.pwsafe.pwsafe
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: pwsafe
 rename-icon: pwsafe
@@ -41,8 +41,10 @@ modules:
     sources:
       - type: git
         url: https://github.com/apache/xerces-c
-        tag: v3.2.4
-        commit: 5052c90b067dcc347d58822b450897d16e2c31e5
+        tag: v3.3.0
+        commit: 31b4b3a06105dcd607db9fda9d1883ad7e489bfe
+      - type: patch
+        path: patches/xerces-c-cxx17.patch
     cleanup:
       - /lib/cmake
       - /share/doc/xerces-c
